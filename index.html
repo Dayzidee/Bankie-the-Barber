@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankie The Barber | Premium Barber Shop Experience</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Particle Background -->
+    <div id="particle-background"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky-nav">
+      <div class="logo">
+        <h3>Bankie The Barber</h3>
+      </div>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+      <div class="menu" id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#videos">Videos</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="greeting">Welcome to</span>
+          <h1 class="brand-name">Bankie The Barber</h1>
+          <p class="hero-description">
+            Where Style Meets Precision. Experience the art of premium grooming
+            with Lagos' most trusted barber.
+          </p>
+          <div class="btn-group">
+            <button class="cta-primary" onclick="bookAppointment()">Book Appointment</button>
+            <a href="#services" class="btn-secondary">View Services</a>
+          </div>
+          <div class="social-links hero-social">
+            <a href="https://www.instagram.com/bankkiethebarber" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/2348101595840" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-container">
+            <img src="bankiemedia/IMG-20250614-WA0019.jpg" alt="Bankie The Barber" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About Bankie</h2>
+          <p>Your Premier Barber Experience</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Crafting Excellence Since Day One</h3>
+            <p>
+              At Bankie The Barber, we believe that every cut tells a story. With years of experience
+              and a passion for perfection, we deliver more than just a haircut – we create an experience
+              that leaves you looking and feeling your absolute best.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <h4>500+</h4>
+                <p>Happy Clients</p>
+              </div>
+              <div class="stat">
+                <h4>3+</h4>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat">
+                <h4>100%</h4>
+                <p>Satisfaction</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img src="bankiemedia/IMG-20250614-WA0025.jpg" alt="Bankie at work" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>Premium Grooming Services Tailored for You</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cut"></i>
+            </div>
+            <h3>Precision Haircuts</h3>
+            <p>Expert cuts tailored to your face shape and personal style</p>
+            <span class="price">From ₦3,000</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cut"></i>
+            </div>
+            <h3>Beard Trimming</h3>
+            <p>Professional beard shaping and maintenance</p>
+            <span class="price">From ₦2,000</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-spray-can"></i>
+            </div>
+            <h3>Hair Styling</h3>
+            <p>Complete styling with premium products</p>
+            <span class="price">From ₦1,500</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Premium Package</h3>
+            <p>Full grooming experience with hot towel treatment</p>
+            <span class="price">From ₦8,000</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Work</h2>
+          <p>See the Transformation</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="bankiemedia/IMG-20250614-WA0030.jpg" alt="Haircut 1" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="bankiemedia/IMG-20250614-WA0032.jpg" alt="Haircut 2" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="bankiemedia/IMG-20250614-WA0035.jpg" alt="Haircut 3" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="bankiemedia/IMG-20250614-WA0038.jpg" alt="Haircut 4" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="bankiemedia/IMG-20250614-WA0042.jpg" alt="Haircut 5" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="bankiemedia/IMG-20250614-WA0045.jpg" alt="Haircut 6" />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="video-section" id="videos">
+      <div class="container">
+        <div class="section-header">
+          <h2>Behind the Scenes</h2>
+          <p>Watch Bankie in Action</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-item">
+            <video controls poster="bankiemedia/IMG-20250614-WA0025.jpg">
+              <source src="bankiemedia/VID-20250614-WA0073.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-item">
+            <video controls poster="bankiemedia/IMG-20250614-WA0030.jpg">
+              <source src="bankiemedia/VID-20250614-WA0074.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-item">
+            <video controls poster="bankiemedia/IMG-20250614-WA0032.jpg">
+              <source src="bankiemedia/VID-20250614-WA0075.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-item">
+            <video controls poster="bankiemedia/IMG-20250614-WA0035.jpg">
+              <source src="bankiemedia/VID-20250614-WA0077.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Clients Say</h2>
+          <p>Real Reviews from Real Customers</p>
+        </div>
+        <div class="testimonials-carousel">
+          <div class="testimonial active">
+            <div class="testimonial-content">
+              <p>"Bankie is hands down the best barber in Lagos! The attention to detail is incredible."</p>
+              <div class="testimonial-author">
+                <h4>Adebayo T.</h4>
+                <span>Regular Client</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"Professional service, great atmosphere, and always leave looking fresh. Highly recommended!"</p>
+              <div class="testimonial-author">
+                <h4>Michael O.</h4>
+                <span>Business Executive</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The best haircut I've ever had. Bankie truly understands what looks good on you."</p>
+              <div class="testimonial-author">
+                <h4>Chinedu P.</h4>
+                <span>Creative Director</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="prev-testimonial">‹</button>
+          <button class="next-testimonial">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2>Book Your Appointment</h2>
+            <p>Ready for a fresh new look? Get in touch with us today!</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Call Us</h4>
+                  <a href="tel:+2348101595840">+234 810 159 5840</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Visit Us</h4>
+                  <span>Lagos, Nigeria</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Working Hours</h4>
+                  <span>Mon - Sat: 9AM - 7PM</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-instagram"></i>
+                <div>
+                  <h4>Follow Us</h4>
+                  <a href="https://www.instagram.com/bankkiethebarber" target="_blank">@bankkiethebarber</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Your Name" />
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" required placeholder="Phone Number" />
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+              </div>
+              <button type="submit" class="cta-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Bankie The Barber</h3>
+            <p>Where Style Meets Precision</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/bankkiethebarber" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/2348101595840" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <ul>
+              <li><i class="fas fa-phone"></i> +234 810 159 5840</li>
+              <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+              <li><i class="fas fa-clock"></i> Mon - Sat: 9AM - 7PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Bankie The Barber. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+      <a href="https://wa.me/2348101595840" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.1.0/tsparticles.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
