@@ -565,6 +565,7 @@ body {
   opacity: 0;
   transition: var(--transition);
   border-radius: 15px;
+  pointer-events: none; /* Add this line */
 }
 
 .video-overlay i {
