@@ -1024,3 +1024,10 @@ body {
   }
 }
 
+.btn-group .cta-primary,
+.btn-group .btn-secondary {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: var(--transition);
+}
+

@@ -97,9 +97,9 @@ function initializeAnimations() {
     heroTl.from('.greeting', { opacity: 0, y: 30, duration: 0.8, delay: 0.2 })
           .from('.brand-name', { opacity: 0, y: 50, duration: 1, ease: 'power2.out' }, '-=0.5')
           .from('.hero-description', { opacity: 0, y: 30, duration: 0.8 }, '-=0.3')
-          .from('.btn-group .cta-primary', { opacity: 0, x: -30, duration: 0.6 }, '-=0.2')
-          .from('.btn-group .btn-secondary', { opacity: 0, x: 30, duration: 0.6 }, '-=0.4')
-          .from('.hero-social .social-links a', { opacity: 0, y: 20, duration: 0.4, stagger: 0.1 }, '-=0.2')
+          .from('.btn-group .cta-primary', { opacity: 0, x: -30, duration: 0.6 }, '+=0.2') // changed from '-=0.2'
+          .from('.btn-group .btn-secondary', { opacity: 0, x: 30, duration: 0.6 }, '+=0.1') // changed from '-=0.4'
+          .from('.hero-social .social-links a', { opacity: 0, y: 20, duration: 0.4, stagger: 0.1 }, '+=0.1')
           .from('.hero-image', { opacity: 0, scale: 0.8, duration: 1, ease: 'power2.out' }, '-=0.8');
     
     // Section animations on scroll
@@ -492,48 +492,45 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Add loading animation
+// Loader animation: show immediately
+const loader = document.createElement('div');
+loader.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease;
+`;
+const loaderText = document.createElement('div');
+loaderText.textContent = 'BANKIE THE BARBER';
+loaderText.style.cssText = `
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #D4AF37, #B8860B);
+    -webkit-background-clip: text;
+    color: var(--primary-red);
+    letter-spacing: 3px;
+    animation: pulse 1.5s infinite;
+`;
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+`;
+document.head.appendChild(style);
+loader.appendChild(loaderText);
+document.body.appendChild(loader);
+
+// Remove loader after 2 seconds (keep this in window.onload)
 window.addEventListener('load', function() {
-    const loader = document.createElement('div');
-    loader.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #0f0f0f;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        transition: opacity 0.5s ease;
-    `;
-    
-    const loaderText = document.createElement('div');
-    loaderText.textContent = 'BANKIE THE BARBER';
-    loaderText.style.cssText = `
-        font-family: 'Oswald', sans-serif;
-        font-size: 2rem;
-        background: linear-gradient(90deg, #D4AF37, #B8860B);
-        -webkit-background-clip: text;
-        color: var(--primary-red);
-        letter-spacing: 3px;
-        animation: pulse 1.5s infinite;
-    `;
-    
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    loader.appendChild(loaderText);
-    document.body.appendChild(loader);
-    
-    // Remove loader after 2 seconds
     setTimeout(() => {
         loader.style.opacity = '0';
         setTimeout(() => {
