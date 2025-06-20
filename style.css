@@ -384,7 +384,7 @@ body {
 
 .about-image img {
   width: 100%;
-  height: 400px;
+  height: 650px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 15px 40px var(--shadow-dark);
