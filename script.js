@@ -4,28 +4,38 @@ const loader = (() => {
   el.style.cssText = `
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: #111; display: flex; align-items: center; justify-content: center;
-    z-index: 10000; transition: opacity 0.5s ease;
+    z-index: 10000; opacity: 0; transform: scale(0.96);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
   `;
-  const text = document.createElement("div");
-  text.textContent = "BANKKIETHEBARBER";
-  text.style.cssText = `
-    font-family: 'Oswald', sans-serif; font-size: 2rem;
-    background: linear-gradient(90deg, #444, #b0b0b0);
-    -webkit-background-clip: text; color: transparent;
-    letter-spacing: 3px; animation: pulse 1.5s infinite;
+  // Logo image
+  const img = document.createElement("img");
+  img.src = "bankiemedia/bankielogo.jpeg";
+  img.alt = "BankkieTheBarber Logo";
+  img.style.cssText = `
+    width: 500px; height: 500px; object-fit: contain; border-radius: 10%;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3); animation: pulse 1.5s infinite;
+    transition: filter 0.5s;
   `;
   const style = document.createElement("style");
   style.textContent = `
-    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.5;} }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.7;} }
   `;
   document.head.appendChild(style);
-  el.appendChild(text);
+  el.appendChild(img);
   document.body.appendChild(el);
+
+  // Animate in
+  setTimeout(() => {
+    el.style.opacity = "1";
+    el.style.transform = "scale(1)";
+  }, 10);
+
   window.addEventListener("load", () => {
     setTimeout(() => {
       el.style.opacity = "0";
-      setTimeout(() => el.remove(), 500);
-    }, 2000);
+      el.style.transform = "scale(0.96)";
+      setTimeout(() => el.remove(), 800);
+    }, 3000);
   });
   return el;
 })();
